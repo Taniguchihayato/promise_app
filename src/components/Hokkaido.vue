@@ -1,7 +1,7 @@
 <template>
   <li id="list_hokkaido">
     <div id="overlay" v-bind:class="{ hidden: isActive }" @click="change"></div>
-    <a href="#" id="hokkaidou_area" @click="change">北海道</a>
+    <a href="http://www.pref.hokkaido.lg.jp/" id="hokkaidou_area" @click="change">北海道</a>
   </li>
 </template>
 
@@ -23,5 +23,6 @@ li {
   border-radius: 6px;
   background-color: black;
   color: #fff;
+  text-decoration: none;
 }
 </style>

@@ -21,14 +21,14 @@ export default {
   data() {
     return {
       isActive: true,
-    }
+    };
   },
   methods: {
     change() {
-      this.isActive = !this.isActive
+      this.isActive = !this.isActive;
     },
   },
-}
+};
 </script>
 
 <style scoped>
@@ -47,6 +47,7 @@ li {
   border-radius: 6px;
   background-color: black;
   color: #fff;
+  text-decoration: none;
 }
 
 #area {

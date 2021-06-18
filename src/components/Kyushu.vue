@@ -44,6 +44,7 @@ li {
   border-radius: 6px;
   background-color: black;
   color: #fff;
+  text-decoration: none;
 }
 
 #area {
