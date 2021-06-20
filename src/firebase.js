@@ -1,6 +1,6 @@
 import firebase from "firebase";
 import "firebase/firestore";
-import "firebase/auth"
+import "firebase/auth";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -9,7 +9,7 @@ const firebaseConfig = {
   projectId: "vue-upload-8c02f",
   storageBucket: "vue-upload-8c02f.appspot.com",
   messagingSenderId: "822741079663",
-  appId: "1:822741079663:web:17efbd82e283222dc99f9a"
+  appId: "1:822741079663:web:17efbd82e283222dc99f9a",
 };
 
 firebase.initializeApp(firebaseConfig);

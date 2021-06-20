@@ -16,7 +16,7 @@
       <button @click="onUpload">Upload</button>
     </div>
     <div v-for="onePicture in pictures" :key="onePicture.id">
-      <img v-bind:src="onePicture.text"  width="600" height="400" />
+      <img v-bind:src="onePicture.text" width="600" height="400" />
       <div class="desc">Add a description of the image here</div>
     </div>
   </div>
@@ -63,10 +63,7 @@ export default {
             const gazou = {
               text: this.picture,
             };
-            firebase
-              .firestore()
-              .collection("pictures")
-              .add(gazou);
+            firebase.firestore().collection("pictures").add(gazou);
           });
         }
       );
