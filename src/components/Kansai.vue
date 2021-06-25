@@ -36,8 +36,8 @@ li {
 
 #list_kansai {
   position: relative;
-  top: 188px;
-  left: 28%;
+  top: 260px;
+  right: 15%;
 }
 
 #list_kansai > a {
@@ -51,7 +51,7 @@ li {
 #area {
   position: absolute;
   top: 23px;
-  left: 0;
+  left: 45%;
   width: 170px;
   height: 50px;
   list-style: none;

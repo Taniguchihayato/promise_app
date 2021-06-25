@@ -1,8 +1,12 @@
 <template>
   <li id="list_tohoku">
-    <div id="overlay" v-bind:class="{hidden: isActive}" @mouseover="change"></div>
+    <div
+      id="overlay"
+      v-bind:class="{ hidden: isActive }"
+      @mouseover="change"
+    ></div>
     <a href="#" id="tohoku_area" @mouseover="change">東北</a>
-    <ul id="area" v-bind:class="{hidden: isActive}">
+    <ul id="area" v-bind:class="{ hidden: isActive }">
       <li><a href="#">青森</a></li>
       <li><a href="#">秋田</a></li>
       <li><a href="#">岩手</a></li>
@@ -14,30 +18,29 @@
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
+export default {
+  data() {
+    return {
       isActive: true,
-    }
+    };
+  },
+  methods: {
+    change() {
+      this.isActive = !this.isActive;
     },
-    methods: {
-      change() {
-        this.isActive = !this.isActive;
-      }
-    }
-  }
+  },
+};
 </script>
 
-
 <style scoped>
-  li {
-    list-style: none;
-  }
+li {
+  list-style: none;
+}
 
-  #list_tohoku {
+#list_tohoku {
   position: relative;
-  top: 130px;
-  left: 59%;
+  top: 166px;
+  left: 15%;
 }
 
 #list_tohoku > a {
@@ -51,7 +54,7 @@
 #area {
   position: absolute;
   top: 23px;
-  left: 0;
+  left: 45%;
   width: 140px;
   height: 50px;
   list-style: none;

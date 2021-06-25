@@ -1,7 +1,14 @@
 <template>
   <li id="list_kanto">
-    <div id="overlay" v-bind:class="{ hidden: isActive }" @mouseover="change"></div>
-    <a href="#" id="kanto_area" @mouseover="change">関東</a>
+    <div
+      id="overlay"
+      v-bind:class="{ hidden: isActive }"
+      @mouseover="change"
+
+    ></div>
+    <a href="#" @mouseover="change">
+      <div class="kanto">関東</div>
+      </a>
     <ul id="area" v-bind:class="{ hidden: isActive }">
       <li><a href="#">東京</a></li>
       <li><a href="#">神奈川</a></li>
@@ -19,14 +26,15 @@ export default {
   data() {
     return {
       isActive: true,
-    }
+    };
   },
   methods: {
     change() {
-      this.isActive = !this.isActive
+      this.isActive = !this.isActive;
+      console.log('切り替わる')
     },
   },
-}
+};
 </script>
 
 <style scoped>
@@ -36,22 +44,30 @@ li {
 
 #list_kanto {
   position: relative;
-  top: 195px;
-  left: 52%;
+  top: 270px;
+  left: 8%;
+  /* backface-visibility: hidden; */
 }
 
 #list_kanto > a {
-  padding: 3px;
+  /* padding: 3px; */
+  padding: 10px;
+  /* display: inline-block; */
+}
+
+.kanto {
+  padding: 1px;
   border-radius: 6px;
   background-color: black;
   color: #fff;
   text-decoration: none;
+  display: inline-block;
 }
 
 #area {
   position: absolute;
   top: 23px;
-  left: 0;
+  left: 45%;
   width: 170px;
   height: 50px;
   list-style: none;

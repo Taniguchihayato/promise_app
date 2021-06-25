@@ -38,8 +38,8 @@ li {
 
 #list_tyugoku {
   position: relative;
-  top: 155px;
-  left: 12%;
+  top: 230px;
+  right: 30%;
 }
 
 #list_tyugoku > a {
@@ -53,7 +53,7 @@ li {
 #area {
   position: absolute;
   top: 23px;
-  left: 0;
+  left:45%;
   width: 170px;
   height: 50px;
   list-style: none;

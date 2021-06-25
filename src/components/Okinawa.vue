@@ -1,7 +1,7 @@
 <template>
   <li id="list_hokkaido">
-    <div id="overlay" v-bind:class="{ hidden: isActive }" @click="change"></div>
-    <a href="#" id="hokkaidou_area" @click="change">沖縄</a>
+    <!-- <div id="overlay" v-bind:class="{ hidden: isActive }" @click="change"></div> -->
+    <a href="#" id="hokkaidou_area">沖縄</a>
   </li>
 </template>
 
@@ -12,8 +12,8 @@ li {
 
 #list_hokkaido {
   position: relative;
-  top: 175px;
-  left: 25%;
+  top: 275px;
+  right:16%;
 }
 
 #list_hokkaido > a {

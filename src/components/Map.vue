@@ -58,9 +58,10 @@ export default {
 }
 
 #map {
-  width: 95%;
+  width: 100%;
   border: solid 2px #76ae25;
   margin: 0 auto;
+  height: 570px;
   background: linear-gradient(#fff 0%, #b4e9f0 60%, #b4e9f0 100%);
 }
 
@@ -84,8 +85,8 @@ export default {
   /* background-image: url("https://nureyon.com/sample/20/japanese_archipelago-1-p12.svg?1602963933"); */
   background-image: url("https://frame-illust.com/fi/wp-content/uploads/2017/06/japanesemap-10012.png");
   background-size: cover;
-  width: 390px;
-  height: 390px;
+  width: 490px;
+  height: 490px;
   /* width: 500px;
   height: 360px; */
   padding: 10px;

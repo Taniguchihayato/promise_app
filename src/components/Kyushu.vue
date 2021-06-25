@@ -35,8 +35,8 @@ li {
 
 #list_kyushu {
   position: relative;
-  top: 165px;
-  right: 4%;
+  top: 250px;
+  right: 46%;
 }
 
 #list_kyushu > a {
@@ -50,7 +50,7 @@ li {
 #area {
   position: absolute;
   top: 23px;
-  left: 0;
+  left: 45%;
   width: 170px;
   height: 50px;
   list-style: none;

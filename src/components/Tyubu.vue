@@ -1,9 +1,14 @@
 <template>
   <li id="list_tyubu">
-    <div id="overlay" v-bind:class="{ hidden: isActive }" @mouseover="change"></div>
+    <div
+      id="overlay"
+      v-bind:class="{ hidden: isActive }"
+      @mouseover="change"
+    ></div>
     <a href="#" id="tyubu_area" @mouseover="change">中部</a>
     <ul id="area" v-bind:class="{ hidden: isActive }">
-      <li><a href="#">愛知</a></li>
+      <!-- <li><a href="#">愛知</a></li> -->
+      <li><router-link to="/Masaki/">愛知</router-link></li>
       <li><a href="#">新潟</a></li>
       <li><a href="#">静岡</a></li>
       <li><a href="#">富山</a></li>
@@ -21,14 +26,14 @@ export default {
   data() {
     return {
       isActive: true,
-    }
+    };
   },
   methods: {
     change() {
-      this.isActive = !this.isActive
+      this.isActive = !this.isActive;
     },
   },
-}
+};
 </script>
 
 <style scoped>
@@ -38,8 +43,8 @@ li {
 
 #list_tyubu {
   position: relative;
-  top: 185px;
-  left: 38%;
+  top: 250px;
+  right: 5%;
 }
 
 #list_tyubu > a {
@@ -53,7 +58,7 @@ li {
 #area {
   position: absolute;
   top: 23px;
-  left: 0;
+  left: 45%;
   width: 190px;
   height: 50px;
   list-style: none;

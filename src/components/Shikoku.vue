@@ -33,8 +33,8 @@ li {
 
 #list_shikoku {
   position: relative;
-  top: 169px;
-  left: 12%;
+  top: 250px;
+  right: 30%;
 }
 
 #list_shikoku > a {
@@ -48,7 +48,7 @@ li {
 #area {
   position: absolute;
   top: 23px;
-  left: 0;
+  left: 45%;
   width: 170px;
   height: 50px;
   list-style: none;
