@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <h1>愛知県：豊橋市</h1>
+      <h1>愛知県</h1>
       <h2>{{display}}</h2>
       <input type="file" @change="previewImage" accept="image/*" />
     </div>
