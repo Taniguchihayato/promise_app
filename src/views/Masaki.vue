@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <h1>愛知県：豊橋市</h1>
+      <h1>愛知県</h1>
       <h2>{{display}}</h2>
       <input type="file" @change="previewImage" accept="image/*" />
     </div>
@@ -24,7 +24,7 @@
         :key="onePicture.id"
         style="background: url(http://www.netyasun.com/home/bk-img/b017.jpg)"
       >
-        <p>{{ display }}</p>
+        
         <a target="_blank" v-bind:href="onePicture.text">
           <img v-bind:src="onePicture.text" />
         </a>
