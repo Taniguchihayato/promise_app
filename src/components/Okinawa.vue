@@ -13,7 +13,7 @@ li {
 #list_hokkaido {
   position: relative;
   top: 275px;
-  right:16%;
+  right: 16%;
 }
 
 #list_hokkaido > a {

@@ -22,7 +22,7 @@
   </div>
 </template>
 <script>
-import firebase from "firebase";
+import firebase from "firebase"
 
 export default {
   name: "Upload",
@@ -32,41 +32,41 @@ export default {
       picture: null,
       uploadValue: 0,
       pictures: [],
-    };
+    }
   },
   methods: {
     previewImage(event) {
-      this.uploadValue = 0;
-      this.picture = null;
-      this.imageData = event.target.files[0];
+      this.uploadValue = 0
+      this.picture = null
+      this.imageData = event.target.files[0]
     },
 
     onUpload() {
-      this.picture = null;
+      this.picture = null
       const storageRef = firebase
         .storage()
         .ref(`${this.imageData.name}`)
-        .put(this.imageData);
+        .put(this.imageData)
       storageRef.on(
         `state_changed`,
         (snapshot) => {
           this.uploadValue =
-            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100
         },
         (error) => {
-          console.log(error.message);
+          console.log(error.message)
         },
         () => {
-          this.uploadValue = 100;
+          this.uploadValue = 100
           storageRef.snapshot.ref.getDownloadURL().then((url) => {
-            this.picture = url;
+            this.picture = url
             const gazou = {
               text: this.picture,
-            };
-            firebase.firestore().collection("pictures").add(gazou);
-          });
+            }
+            firebase.firestore().collection("pictures").add(gazou)
+          })
         }
-      );
+      )
     },
   },
   created() {
@@ -79,11 +79,11 @@ export default {
           this.pictures.push({
             id: doc.id,
             ...doc.data(),
-          });
-        });
-      });
+          })
+        })
+      })
   },
-};
+}
 </script>
 <style scoped="">
 img.preview {

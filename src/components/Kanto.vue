@@ -4,11 +4,10 @@
       id="overlay"
       v-bind:class="{ hidden: isActive }"
       @mouseover="change"
-
     ></div>
     <a href="#" @mouseover="change">
       <div class="kanto">関東</div>
-      </a>
+    </a>
     <ul id="area" v-bind:class="{ hidden: isActive }">
       <li><a href="#">東京</a></li>
       <li><a href="#">神奈川</a></li>
@@ -26,15 +25,15 @@ export default {
   data() {
     return {
       isActive: true,
-    };
+    }
   },
   methods: {
     change() {
-      this.isActive = !this.isActive;
-      console.log('切り替わる')
+      this.isActive = !this.isActive
+      console.log("切り替わる")
     },
   },
-};
+}
 </script>
 
 <style scoped>

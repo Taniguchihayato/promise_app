@@ -2,7 +2,7 @@
   <div>
     <div>
       <h1>愛知県：豊橋市</h1>
-      <h2>{{display}}</h2>
+      <h2>{{ display }}</h2>
       <input type="file" @change="previewImage" accept="image/*" />
     </div>
     <div>
@@ -24,17 +24,19 @@
         :key="onePicture.id"
         style="background: url(http://www.netyasun.com/home/bk-img/b017.jpg)"
       >
-        <p>{{ display }}</p>
+        <!-- <p>{{ display }}</p> -->
         <a target="_blank" v-bind:href="onePicture.text">
           <img v-bind:src="onePicture.text" />
         </a>
-        <button @click="likeButton" id="plus-button" class="like">好きボタン</button>
+        <button @click="likeButton" id="plus-button" class="like">
+          好きボタン
+        </button>
       </div>
     </div>
   </div>
 </template>
 <script>
-import firebase from "firebase";
+import firebase from "firebase"
 export default {
   name: "Upload",
   data() {
@@ -45,44 +47,44 @@ export default {
       pictures: [],
       count: 0,
       display: "0 like",
-    };
+    }
   },
   methods: {
     previewImage(event) {
-      this.uploadValue = 0;
-      this.picture = null;
-      this.imageData = event.target.files[0];
+      this.uploadValue = 0
+      this.picture = null
+      this.imageData = event.target.files[0]
     },
     onUpload() {
-      this.picture = null;
+      this.picture = null
       const storageRef = firebase
         .storage()
         .ref(`${this.imageData.name}`)
-        .put(this.imageData);
+        .put(this.imageData)
       storageRef.on(
         `state_changed`,
         (snapshot) => {
           this.uploadValue =
-            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100
         },
         (error) => {
-          console.log(error.message);
+          console.log(error.message)
         },
         () => {
-          this.uploadValue = 100;
+          this.uploadValue = 100
           storageRef.snapshot.ref.getDownloadURL().then((url) => {
-            this.picture = url;
+            this.picture = url
             const gazou = {
               text: this.picture,
-            };
-            firebase.firestore().collection("pictures").add(gazou);
-          });
+            }
+            firebase.firestore().collection("pictures").add(gazou)
+          })
         }
-      );
+      )
     },
     likeButton() {
-      this.count += 1;
-      this.display = this.count + " like";
+      this.count += 1
+      this.display = this.count + " like"
     },
   },
   created() {
@@ -95,11 +97,11 @@ export default {
           this.pictures.push({
             id: doc.id,
             ...doc.data(),
-          });
-        });
-      });
+          })
+        })
+      })
   },
-};
+}
 </script>
 <style>
 img.preview {
@@ -151,7 +153,7 @@ img {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2C3E50;
+  color: #2c3e50;
   margin-top: 60px;
 }
 </style>

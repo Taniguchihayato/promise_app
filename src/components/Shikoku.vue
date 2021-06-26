@@ -1,6 +1,10 @@
 <template>
   <li id="list_shikoku">
-    <div id="overlay" v-bind:class="{ hidden: isActive }" @mouseover="change"></div>
+    <div
+      id="overlay"
+      v-bind:class="{ hidden: isActive }"
+      @mouseover="change"
+    ></div>
     <a href="#" id="shikoku_area" @mouseover="change">四国</a>
     <ul id="area" v-bind:class="{ hidden: isActive }">
       <li><a href="#">香川</a></li>

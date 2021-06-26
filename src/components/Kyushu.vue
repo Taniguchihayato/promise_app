@@ -1,6 +1,10 @@
 <template>
   <li id="list_kyushu">
-    <div id="overlay" v-bind:class="{ hidden: isActive }" @mouseover="change"></div>
+    <div
+      id="overlay"
+      v-bind:class="{ hidden: isActive }"
+      @mouseover="change"
+    ></div>
     <a href="#" id="kyushu_area" @mouseover="change">九州</a>
     <ul id="area" v-bind:class="{ hidden: isActive }">
       <li><a href="#">福岡</a></li>

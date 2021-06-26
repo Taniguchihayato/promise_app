@@ -21,14 +21,14 @@ export default {
   data() {
     return {
       isActive: true,
-    };
+    }
   },
   methods: {
     change() {
-      this.isActive = !this.isActive;
+      this.isActive = !this.isActive
     },
   },
-};
+}
 </script>
 
 <style scoped>
@@ -53,7 +53,7 @@ li {
 #area {
   position: absolute;
   top: 23px;
-  left:45%;
+  left: 45%;
   width: 170px;
   height: 50px;
   list-style: none;

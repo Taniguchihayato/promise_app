@@ -26,14 +26,14 @@ export default {
   data() {
     return {
       isActive: true,
-    };
+    }
   },
   methods: {
     change() {
-      this.isActive = !this.isActive;
+      this.isActive = !this.isActive
     },
   },
-};
+}
 </script>
 
 <style scoped>

@@ -26,15 +26,15 @@
 </template>
 
 <script>
-import Tohoku from "@/components/Tohoku.vue";
-import Kanto from "@/components/Kanto.vue";
-import Tyubu from "@/components/Tyubu.vue";
-import Kansai from "@/components/Kansai.vue";
-import Tyugoku from "@/components/Tyugoku.vue";
-import Shikoku from "@/components/Shikoku.vue";
-import Kyushu from "@/components/Kyushu.vue";
-import Hokkaido from "@/components/Hokkaido.vue";
-import Okinawa from "@/components/Okinawa.vue";
+import Tohoku from "@/components/Tohoku.vue"
+import Kanto from "@/components/Kanto.vue"
+import Tyubu from "@/components/Tyubu.vue"
+import Kansai from "@/components/Kansai.vue"
+import Tyugoku from "@/components/Tyugoku.vue"
+import Shikoku from "@/components/Shikoku.vue"
+import Kyushu from "@/components/Kyushu.vue"
+import Hokkaido from "@/components/Hokkaido.vue"
+import Okinawa from "@/components/Okinawa.vue"
 export default {
   name: "Map",
   components: {
@@ -48,7 +48,7 @@ export default {
     Hokkaido,
     Okinawa,
   },
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
