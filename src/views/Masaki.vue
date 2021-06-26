@@ -109,6 +109,11 @@ img.preview {
 body {
   margin: 0;
   font-family: Nunito Sans;
+  background-color: #486d46; /* 背景色 */
+  background-image: url("https://msp.c.yimg.jp/images/v2/FUTi93tXq405grZVGgDqG_3mwQT1DBy07DYnnILvS6i0gOtza2ye8dH-Ijvyxwvz5b9UG-chcGcHJnagxcbw3QmcWXDRs498rWzBFMM_tPIggfheT3VZvQQXUlSp7XonFW8qCg9JccEDAkW7qgTayoAgOERmond4rce8jpRphSmrlg_CZut-1eRwx49pFTf5VRPWnNics_sVIEHbePAdpmvOmoX0WrQiLhpzsHn6hbsorhFUXYAyC9eSeGpbA54sICAPnmy3kX06w-KSWOD6Ug==/cp_bgpt11.png"); /* 画像 */
+  background-size: cover; /* 全画面 */
+  background-attachment: fixed; /* 固定 */
+  background-position: center center; /* 縦横中央 */
 }
 h1 {
   text-align: center;
